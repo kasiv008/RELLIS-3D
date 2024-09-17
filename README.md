@@ -19,7 +19,7 @@ Peng Jiang<sup>1</sup>, Philip Osteen<sup>2</sup>, Maggie Wigness<sup>2</sup> an
 ## Overview
 Semantic scene understanding is crucial for robust and safe autonomous navigation, particularly so in off-road environments. Recent deep learning advances for 3D semantic segmentation rely heavily on large sets of training data; however, existing autonomy datasets represent urban environments or lack multimodal off-road data. We fill this gap with RELLIS-3D, a multimodal dataset collected in an off-road environment containing annotations for **13,556 LiDAR scans** and **6,235 images**. The data was collected on the Rellis Campus of Texas A\&M University and presents challenges to existing algorithms related to class imbalance and environmental topography. Additionally, we evaluate the current state of the art deep learning semantic segmentation models on this dataset. Experimental results show that RELLIS-3D presents challenges for algorithms designed for segmentation in urban environments. Except for the annotated data, the dataset also provides full-stack sensor data in ROS bag format, including **RGB camera images**, **LiDAR point clouds**, **a pair of stereo images**, **high-precision GPS measurement**, and **IMU data**. This novel dataset provides the resources needed by researchers to develop more advanced algorithms and investigate new research directions to enhance autonomous navigation in off-road environments.
 
-![LiDAR Scans Statics](./images/data_example.png)
+![LiDAR Scans Statics](./images/GOD_image.png)
 
 ### Recording Platform
 * [Clearpath Robobtics Warthog](https://clearpathrobotics.com/warthog-unmanned-ground-vehicle-robot/)
@@ -27,12 +27,12 @@ Semantic scene understanding is crucial for robust and safe autonomous navigatio
 ### Sensor Setup
 * 64 channels Lidar: [Ouster OS1](https://ouster.com/products/os1-lidar-sensor)
 * 3 RGB Camera: [Basler acA1920-50gc](https://www.baslerweb.com/en/products/cameras/area-scan-cameras/ace/aca1920-50gc/) + [Edmund Optics 16mm/F1.8 86-571](https://www.edmundoptics.com/p/16mm-focal-length-hp-series-fixed-focal-length-lens/28990/)
-* Thermal Camera: [FLIR ADK](https://www.flir.com/products/adk/?model=40640G032-6PAA2&vertical=automotive&segment=oem)
+* Thermal Camera: [FLIR Boson 640](https://www.flir.com/products/boson/?model=20640A032&vertical=lwir&segment=oem)
 * Inertial Navigation System (IMU/GPS): [Vectornav VN-300 Dual Antenna GNSS/INS](https://www.vectornav.com/products/vn-300)
-* 2D mmwave RADAR: [Navtech RS3](https://navtechradar.com/radar-solutions/radar-for-industrial-automation/sensors/)
+* 2D mmwave RADAR: [Navtech CTS350-X](https://navtechradar.com/radar-solutions/radar-for-intelligent-transport-solutions/clearway-technical-specification/)
 * RTK GPS: [Saprkfun RTK Facet](https://www.sparkfun.com/products/19984)
 
-![Sensor Setup Illustration](./images/sensor_setup.png)
+<!--![Sensor Setup Illustration](./images/sensor_setup.png)-->
 
 
 ## Folder structure
@@ -42,14 +42,11 @@ GOD
 ├── pt_test.lst
 ├── pt_val.lst
 ├── pt_train.lst
-├── pt_test.lst
-├── pt_train.lst
-├── pt_val.lst
 ├── 00000
       ├── os1_cloud_node_kitti_bin/             -- directory containing ".bin" files with Ouster 64-Channels point clouds.   
-      ├── os1_cloud_node_semantickitti_label_id/     -- containing, ".label" files for Ouster Lidar point cloud with  manually labelled semantics label
+      <!--├── os1_cloud_node_semantickitti_label_id/     -- containing, ".label" files for Ouster Lidar point cloud with  manually labelled semantics label
       ├── vel_cloud_node_kitti_bin/             -- directory containing ".bin" files with Velodyne 32-Channels point clouds.   
-      ├── vel_cloud_node_semantickitti_label_id/     -- containing, ".label" files for Velodyne Lidar point cloud transfered from Ouster point cloud.
+      ├── vel_cloud_node_semantickitti_label_id/     -- containing, ".label" files for Velodyne Lidar point cloud transfered from Ouster point cloud.-->
       ├── pylon_camera_node/    -- directory containing ".png" files from the color   camera.  
       ├── pylon_camera_node_label_color -- color image lable
       ├── pylon_camera_node_label_id -- id image lable
@@ -62,7 +59,7 @@ GOD
 -->
 ## Annotated Data:
 ### Ontology:
-With the goal of providing multi-modal data to enhance autonomous off-road navigation, we defined an ontology of object and terrain classes, which largely derives from [the RELLIS-3D dataset](http://rugd.vision/) but also includes unique terrain and object classes not present in RELLIS-3D. Specifically, sequences from this dataset includes classes gravel and mulch. Additionally, this dataset provides a finer-grained class structure for water sources, i.e., puddle and deep water, as these two classes present different traversability scenarios for most robotic platforms. Overall, 22 classes (including void class) are present in the data.
+With the goal of providing multi-modal data to enhance autonomous off-road navigation, we defined an ontology of object and terrain classes, which largely derives from [the RELLIS-3D dataset](http://rugd.vision/) but also includes unique terrain and object classes not present in RELLIS-3D. Specifically, sequences from this dataset includes classes gravel and mulch. Overall, 22 classes (including void class) are present in the data.
 
 **Ontology Definition** ([Download 18KB](https://drive.google.com/file/d/1K8Zf0ju_xI5lnx3NTDLJpVTs59wmGPI6/view?usp=sharing))
 
