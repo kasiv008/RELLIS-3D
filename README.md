@@ -1,18 +1,21 @@
-<h1>RELLIS-3D: A Multi-modal Dataset for Off-Road Robotics</h1>
+<h align="center">
+<h1>The Great Outdoor Dataset: Off-Road Multi-Modal Dataset</h1>
+</h>
 <p align="center">
 <a href="https://www.tamu.edu/"><img src="images/tamu_logo.png" alt="Texas A&M University" height="90px" width="450px"></a>&emsp;&emsp;&emsp;&emsp;<a href="https://www.arl.army.mil/"><img src="images/arl_logo.png" alt="The DEVCOM Army Research Laboratory" height="90px" width="270px"></a></p>
 <p align="center">
 Peng Jiang<sup>1</sup>, Philip Osteen<sup>2</sup>, Maggie Wigness<sup>2</sup> and Srikanth Saripalli<sup>1</sup><br>
 1. <a href="https://www.tamu.edu/">Texas A&M University; </a>&emsp;2. <a href="https://www.arl.army.mil/">CCDC Army Research Laboratory</a><br>
-<a href="https://unmannedlab.github.io/research/RELLIS-3D">[Website]</a> <a href="https://arxiv.org/abs/2011.12954">[Paper]</a> <a href="https://github.com/unmannedlab/RELLIS-3D">[Github]</a> 
+<!--a href="https://unmannedlab.github.io/research/RELLIS-3D">[Website]</a> <a href="https://arxiv.org/abs/2011.12954">[Paper]</a> <a href="https://github.com/unmannedlab/RELLIS-3D">[Github]</a--> 
 </p>
 
-## Updates
+<!--## Updates
 * 11/26/2020 v1.0 release
 * 02/25/2021 improve camera and lidar calibration parameter
 * 03/04/2021 update ROS bag with new tf (v1.1 release)
 * 06/14/2021 fix missing labels of point cloud and fix wrong poses
 * 01/24/2022 add Velodyne point clouds in kitti format and labels transfered from Ouster
+-->
 ## Overview
 Semantic scene understanding is crucial for robust and safe autonomous navigation, particularly so in off-road environments. Recent deep learning advances for 3D semantic segmentation rely heavily on large sets of training data; however, existing autonomy datasets represent urban environments or lack multimodal off-road data. We fill this gap with RELLIS-3D, a multimodal dataset collected in an off-road environment containing annotations for **13,556 LiDAR scans** and **6,235 images**. The data was collected on the Rellis Campus of Texas A\&M University and presents challenges to existing algorithms related to class imbalance and environmental topography. Additionally, we evaluate the current state of the art deep learning semantic segmentation models on this dataset. Experimental results show that RELLIS-3D presents challenges for algorithms designed for segmentation in urban environments. Except for the annotated data, the dataset also provides full-stack sensor data in ROS bag format, including **RGB camera images**, **LiDAR point clouds**, **a pair of stereo images**, **high-precision GPS measurement**, and **IMU data**. This novel dataset provides the resources needed by researchers to develop more advanced algorithms and investigate new research directions to enhance autonomous navigation in off-road environments.
 
@@ -23,10 +26,11 @@ Semantic scene understanding is crucial for robust and safe autonomous navigatio
 
 ### Sensor Setup
 * 64 channels Lidar: [Ouster OS1](https://ouster.com/products/os1-lidar-sensor)
-* 32 Channels Lidar: [Velodyne Ultra Puck](https://velodynelidar.com/vlp-32c.html)
-* 3D Stereo Camera: [Nerian Karmin2](https://nerian.com/products/karmin2-3d-stereo-camera/) + [Nerian SceneScan](https://nerian.com/products/scenescan-stereo-vision/) [(Sensor Configuration)](https://nerian.com/support/calculator/?1,10,0,6,2,1600,1200,1,1,1,800,592,1,6,2,0,61.4,0,0,1,1,0,5,0,0,0,0.66,0,1,25,1,0,1,256,0.25,256,4.0,5.0,0,1.5,1,#results)
-* RGB Camera: [Basler acA1920-50gc](https://www.baslerweb.com/en/products/cameras/area-scan-cameras/ace/aca1920-50gc/) + [Edmund Optics 16mm/F1.8 86-571](https://www.edmundoptics.com/p/16mm-focal-length-hp-series-fixed-focal-length-lens/28990/)
-* Inertial Navigation System (GPS/IMU): [Vectornav VN-300 Dual Antenna GNSS/INS](https://www.vectornav.com/products/vn-300)
+* 3 RGB Camera: [Basler acA1920-50gc](https://www.baslerweb.com/en/products/cameras/area-scan-cameras/ace/aca1920-50gc/) + [Edmund Optics 16mm/F1.8 86-571](https://www.edmundoptics.com/p/16mm-focal-length-hp-series-fixed-focal-length-lens/28990/)
+* Thermal Camera: [FLIR ADK](https://www.flir.com/products/adk/?model=40640G032-6PAA2&vertical=automotive&segment=oem)
+* Inertial Navigation System (IMU/GPS): [Vectornav VN-300 Dual Antenna GNSS/INS](https://www.vectornav.com/products/vn-300)
+* 2D mmwave RADAR: [Navtech RS3](https://navtechradar.com/radar-solutions/radar-for-industrial-automation/sensors/)
+* RTK GPS: [Saprkfun RTK Facet](https://www.sparkfun.com/products/19984)
 
 ![Sensor Setup Illustration](./images/sensor_setup.png)
 
@@ -34,7 +38,7 @@ Semantic scene understanding is crucial for robust and safe autonomous navigatio
 ## Folder structure
 
 <pre>
-Rellis-3D
+GOD
 ├── pt_test.lst
 ├── pt_val.lst
 ├── pt_train.lst
@@ -53,12 +57,12 @@ Rellis-3D
       └── poses.txt             -- file containing the poses of every scan.
 </pre>
 
-## Download Link on BaiDu Pan:
+<!--## Download Link on BaiDu Pan:
 链接: https://pan.baidu.com/s/1akqSm7mpIMyUJhn_qwg3-w?pwd=4gk3 提取码: 4gk3 复制这段内容后打开百度网盘手机App，操作更方便哦
-
+-->
 ## Annotated Data:
 ### Ontology:
-With the goal of providing multi-modal data to enhance autonomous off-road navigation, we defined an ontology of object and terrain classes, which largely derives from [the RUGD dataset](http://rugd.vision/) but also includes unique terrain and object classes not present in RUGD. Specifically, sequences from this dataset includes classes such as mud, man-made barriers, and rubble piles. Additionally, this dataset provides a finer-grained class structure for water sources, i.e., puddle and deep water, as these two classes present different traversability scenarios for most robotic platforms. Overall, 20 classes (including void class) are present in the data.
+With the goal of providing multi-modal data to enhance autonomous off-road navigation, we defined an ontology of object and terrain classes, which largely derives from [the RELLIS-3D dataset](http://rugd.vision/) but also includes unique terrain and object classes not present in RELLIS-3D. Specifically, sequences from this dataset includes classes gravel and mulch. Additionally, this dataset provides a finer-grained class structure for water sources, i.e., puddle and deep water, as these two classes present different traversability scenarios for most robotic platforms. Overall, 22 classes (including void class) are present in the data.
 
 **Ontology Definition** ([Download 18KB](https://drive.google.com/file/d/1K8Zf0ju_xI5lnx3NTDLJpVTs59wmGPI6/view?usp=sharing))
 
@@ -139,7 +143,7 @@ To visualize the datasets using the SemanticKITTI tools, please use this fork: [
 
 **Calibration Raw Data** ([Download 774MB](https://drive.google.com/drive/folders/1VAb-98lh6HWEe_EKLhUC1Xle0jkpp2Fl?usp=sharing
 ))
-
+<!--
 ## Benchmarks
 
 ### Image Semantic Segmenation 
@@ -161,7 +165,7 @@ models | sky | grass |tr ee | bush | concrete | mud | person | puddle | rubble |
 ### Benchmark Reproduction
 
 To reproduce the results, please refer to [here](./benchmarks/README.md)
-
+-->
 ## ROS Bag Raw Data
 
 Data included in raw ROS bagfiles:
