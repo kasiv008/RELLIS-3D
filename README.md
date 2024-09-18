@@ -65,7 +65,7 @@ With the goal of providing multi-modal data to enhance autonomous off-road navig
 
 ### Images Statics:
 
-![Images Statics](./images/img_dist.png)
+![Images Statics](./images/God_stat.png)
 
 <span style="color:red"> Note: Due to the limitation of Google Drive, the downloads might be constrained. Please wait for 24h and try again. If you still can't access the file, please email maskjp@tamu.edu with the title "RELLIS-3D Access Request".</span>.
 
@@ -82,6 +82,7 @@ With the goal of providing multi-modal data to enhance autonomous off-road navig
 
 **Image Split File** ([44KB](https://drive.google.com/file/d/1zHmnVaItcYJAWat3Yti1W_5Nfux194WQ/view?usp=sharing))
 
+<!--
 ### LiDAR Scans Statics:
 
 ![LiDAR Scans Statics](./images/pt_dist.png)
@@ -127,7 +128,7 @@ To visualize the datasets using the SemanticKITTI tools, please use this fork: [
 
 
 **Velodyne LiDAR Annotation SemanticKITTI Format** ([Download 143.6MB](https://drive.google.com/file/d/1n-9FkpiH4QUP7n0PnQBp-s7nzbSzmxp8/view?usp=sharing))
-
+-->
 ### Calibration Download: 
 **Camera Instrinsic** ([Download 2KB](https://drive.google.com/file/d/1NAigZTJYocRSOTfgFBddZYnDsI_CSpwK/view?usp=sharing))
 
