@@ -1,5 +1,5 @@
 <h align="center">
-<h1>The Great Outdoor Dataset: Off-Road Multi-Modal Dataset</h1>
+<h1>The Great Outdoors Dataset: Off-Road Multi-Modal Dataset</h1>
 </h>
 <p align="center">
 <a href="https://www.tamu.edu/"><img src="images/tamu_logo.png" alt="Texas A&M University" height="90px" width="450px"></a>&emsp;&emsp;&emsp;&emsp;<a href="https://www.arl.army.mil/"><img src="images/arl_logo.png" alt="The DEVCOM Army Research Laboratory" height="90px" width="270px"></a></p>
@@ -45,12 +45,13 @@ GOD
 ├── 00000
       ├── os1_cloud_node_kitti_bin/             -- directory containing ".bin" files with Ouster 64-Channels point clouds.   
       <!--├── os1_cloud_node_semantickitti_label_id/     -- containing, ".label" files for Ouster Lidar point cloud with  manually labelled semantics label
-      ├── vel_cloud_node_kitti_bin/             -- directory containing ".bin" files with Velodyne 32-Channels point clouds.   
-      ├── vel_cloud_node_semantickitti_label_id/     -- containing, ".label" files for Velodyne Lidar point cloud transfered from Ouster point cloud.-->
-      ├── pylon_camera_node/    -- directory containing ".png" files from the color   camera.  
+      -->
+      ├── pylon_camera_node/    -- directory containing ".png" files from the color camera.  
       ├── pylon_camera_node_label_color -- color image lable
       ├── pylon_camera_node_label_id -- id image lable
-      ├── calib.txt             -- calibration of velodyne vs. camera. needed for projection of point cloud into camera.  
+      ├──  lwir_camera_node/    -- directory containing ".png" files from the thermal camera.  
+      ├── lwir_camera_node_label_color -- color image lable
+      ├── lwir_camera_node_label_id -- id image lable
       └── poses.txt             -- file containing the poses of every scan.
 </pre>
 
@@ -59,29 +60,39 @@ GOD
 -->
 ## Annotated Data:
 ### Ontology:
-With the goal of providing multi-modal data to enhance autonomous off-road navigation, we defined an ontology of object and terrain classes, which largely derives from [the RELLIS-3D dataset](http://rugd.vision/) but also includes unique terrain and object classes not present in RELLIS-3D. Specifically, sequences from this dataset includes classes gravel and mulch. Overall, 22 classes (including void class) are present in the data.
+With the goal of providing multi-modal data to enhance autonomous off-road navigation, we defined an ontology of object and terrain classes, which largely derives from [the RELLIS-3D dataset](https://github.com/unmannedlab/RELLIS-3D) but also includes unique terrain and object classes not present in RELLIS-3D. Specifically, sequences from this dataset includes classes gravel and mulch. Overall, 22 classes (including void class) are present in the data.
 
-**Ontology Definition** ([Download 18KB](https://drive.google.com/file/d/1K8Zf0ju_xI5lnx3NTDLJpVTs59wmGPI6/view?usp=sharing))
+**Ontology Definition** ([Ontology](./images/GOD_Ontology.png))
 
 ### Images Statics:
 
 ![Images Statics](./images/God_stat.png)
-
+<!--
 <span style="color:red"> Note: Due to the limitation of Google Drive, the downloads might be constrained. Please wait for 24h and try again. If you still can't access the file, please email maskjp@tamu.edu with the title "RELLIS-3D Access Request".</span>.
+-->
 
+### RGB Image Download: 
 
-### Image Download: 
+**Image with Annotation Examples** ([Download 3MB](https://drive.google.com/file/d/1oi5KpBYXefvMpiUzrVE1BWcPfmMieTdx/view?usp=sharing))
 
-**Image with Annotation Examples** ([Download 3MB](https://drive.google.com/file/d/1wIig-LCie571DnK72p2zNAYYWeclEz1D/view?usp=sharing))
+**Full Images** ([Download 11GB](https://drive.google.com/file/d/1UPyMB3Q21JGIUHnwLHI5-uaLICWakZ9W/view?usp=sharing))
 
-**Full Images** ([Download 11GB](https://drive.google.com/file/d/1F3Leu0H_m6aPVpZITragfreO_SGtL2yV/view?usp=sharing))
+**Full Image Annotations Color Format** ([Download 119MB](https://drive.google.com/file/d/1Bqn4opdShBzWf_ltfhK-0CWT77UG_FZx/view?usp=sharing))
 
-**Full Image Annotations Color Format** ([Download 119MB](https://drive.google.com/file/d/1HJl8Fi5nAjOr41DPUFmkeKWtDXhCZDke/view?usp=sharing))
+**Full Image Annotations ID Format** ([Download 94MB](https://drive.google.com/file/d/1HC2xBOF_Z7iZ8mcfKaExQPY0HxWrQTX0/view?usp=sharing))
 
-**Full Image Annotations ID Format** ([Download 94MB](https://drive.google.com/file/d/16URBUQn_VOGvUqfms-0I8HHKMtjPHsu5/view?usp=sharing))
+### Thermal Image Download: 
 
+**Full Images** ([Download 11GB](https://drive.google.com/file/d/1PDcZWtFtDGDpo-_D4ENirTCOg4K_mhTo/view?usp=sharing))
+
+**Full Image Annotations Color Format** ([Download 119MB](https://drive.google.com/file/d/1IRCJaLssCYR9le9PFIOlEa5zRQr7UD1B/view?usp=sharing))
+
+**Full Image Annotations ID Format** ([Download 94MB](https://drive.google.com/file/d/1RADZZH5TJ5PmxkVuA_RCZ_6CbRsKj1C-/view?usp=drive_link))
+
+### LiDAR Data
+<!--
 **Image Split File** ([44KB](https://drive.google.com/file/d/1zHmnVaItcYJAWat3Yti1W_5Nfux194WQ/view?usp=sharing))
-
+-->
 <!--
 ### LiDAR Scans Statics:
 
@@ -130,17 +141,20 @@ To visualize the datasets using the SemanticKITTI tools, please use this fork: [
 **Velodyne LiDAR Annotation SemanticKITTI Format** ([Download 143.6MB](https://drive.google.com/file/d/1n-9FkpiH4QUP7n0PnQBp-s7nzbSzmxp8/view?usp=sharing))
 -->
 ### Calibration Download: 
-**Camera Instrinsic** ([Download 2KB](https://drive.google.com/file/d/1NAigZTJYocRSOTfgFBddZYnDsI_CSpwK/view?usp=sharing))
+**Camera Instrinsic** ([Download 2KB](https://drive.google.com/file/d/1I489hMmcnly5gwao6YC2I0wnOcL8W96w/view?usp=sharing))
 
-**Basler Camera to Ouster LiDAR** ([Download 3KB](https://drive.google.com/file/d/19EOqWS9fDUFp4nsBrMCa69xs9LgIlS2e/view?usp=sharing))
+**RGB Cameras to Ouster LiDAR** ([Download 3KB](https://drive.google.com/file/d/1JZPWwZa7wA6mN_Qv8ze7_535D-xo8Zex/view?usp=sharing))
 
-**Velodyne LiDAR to Ouster LiDAR** ([Download 3KB](https://drive.google.com/file/d/1T6yPwcdzJoU-ifFRelLtDLPuPQswIQwf/view?usp=sharing))
+**Boson Thermal to RGB camera** ([Download 3KB](https://drive.google.com/file/d/1bal8q-ytdc8od2wV9nXW9-fKIPbGuNau/view?usp=sharing))
 
+<!--
 **Stereo Calibration** ([Download 3KB](https://drive.google.com/file/d/1cP5-l_nYt3kZ4hZhEAHEdpt2fzToar0R/view?usp=sharing))
 
 
 **Calibration Raw Data** ([Download 774MB](https://drive.google.com/drive/folders/1VAb-98lh6HWEe_EKLhUC1Xle0jkpp2Fl?usp=sharing
 ))
+
+-->
 <!--
 ## Benchmarks
 
@@ -170,41 +184,33 @@ Data included in raw ROS bagfiles:
 
 Topic Name | Message Tpye | Message Descriptison
 ------------ | ------------- | ---------------------------------
+/Navtech/FFTData | nav_ross/HighPrecisionFFTData | Radar FFT data
+/lester/imu/data | sensor_msgs/Imu | Filtered imu data from embeded imu of Warthog
+/lester/imu/data_raw | sensor_msgs/Imu |  Raw imu data from embeded imu of Warthog
 /img_node/intensity_image | sensor_msgs/Image | Intensity image generated by ouster Lidar
-/img_node/noise_image | sensor_msgs/Image | Noise image generated by ouster Lidar
-/img_node/range_image | sensor_msgs/Image | Range image generated by ouster Lidar
-/imu/data | sensor_msgs/Imu | Filtered imu data from embeded imu of Warthog
-/imu/data_raw | sensor_msgs/Imu |  Raw imu data from embeded imu of Warthog
-/imu/mag | sensor_msgs/MagneticField | Raw magnetic field data from embeded imu of Warthog
-/left_drive/status/battery_current | std_msgs/Float64 | 
-/left_drive/status/battery_voltage | std_msgs/Float64 |
-/mcu/status | warthog_msgs/Status |
-/nerian/left/camera_info | sensor_msgs/CameraInfo | 
-/nerian/left/image_raw | sensor_msgs/Image | Left image from Nerian Karmin2 
-/nerian/right/camera_info | sensor_msgs/CameraInfo | 
-/nerian/right/image_raw  | sensor_msgs/Image | Right image from Nerian Karmin2 
-/odometry/filtered | nav_msgs/Odometry | A filtered local-ization estimate based on wheel odometry (en-coders) and integrated IMU from Warthog
-/os1_cloud_node/imu | sensor_msgs/Imu | Raw imu data from embeded imu of Ouster Lidar
-/os1_cloud_node/points | sensor_msgs/PointCloud2 | Point cloud data from Ouster Lidar
-/os1_node/imu_packets | ouster_ros/PacketMsg | Raw imu data from Ouster Lidar
-/os1_node/lidar_packets | ouster_ros/PacketMsg | Raw lidar data from Ouster Lidar
-/pylon_camera_node/camera_info | sensor_msgs/CameraInfo | 
-/pylon_camera_node/image_raw | sensor_msgs/Image |
-/right_drive/status/battery_current | std_msgs/Float64 | 
-/right_drive/status/battery_voltage | std_msgs/Float64 |
+/lester/imu/mag | sensor_msgs/MagneticField | Raw magnetic field data from embeded imu of Warthog
+/lester/lidar_points | sensor_msgs/PointCloud2 | Point cloud data from Ouster Lidar
+/lester/ouster_center/imu | sensor_msgs/Imu | Raw imu data from embeded imu of Ouster Lidar
+/lester/lidar_points_center | sensor_msgs/PointCloud2 | Centered point cloud data from Ouster Lidar
+/lester/lwir_front/camera_info | sensor_msgs/CameraInfo | Intrinsics of thermal camera 
+/lester/lwir_front/image_rect/compressed | sensor_msgs/CompressedImage | sensor_msgs/Imu | Raw imu data from embeded imu of Ouster Lidar
+/lester/stereo_left/camera_info | sensor_msgs/CameraInfo
+/lester/stereo_left/image_rect_color/compressed | sensor_msgs/CompressedImage | Image from left RGB camera
+/lester/stereo_right/camera_info | sensor_msgs/CameraInfo
+/lester/stereo_right/image_rect_color/compressed | sensor_msgs/CompressedImage | Image from right RGB camera
+/lester/rear_center/camera_info | sensor_msgs/CameraInfo
+/lester/rear_center/image_rect_color/compressed | sensor_msgs/CompressedImage | Image from rear RGB camera
+/lester/ublox/fix | sensor_msgs/NavSatFix | INS data from ublox
+lester/right_drive/status/battery_current | std_msgs/Float64 | 
+lester/right_drive/status/battery_voltage | std_msgs/Float64 |
+lester/left_drive/status/battery_current | std_msgs/Float64 | 
+lester/left_drive/status/battery_voltage | std_msgs/Float64 |
+/lester/rc_teleop/cmd_vel | geometry_msgs/Twist | RC input to warthog
 /tf | tf2_msgs/TFMessage |
 /tf_static  | tf2_msgs/TFMessage
-/vectornav/GPS | sensor_msgs/NavSatFix | INS data from VectorNav-VN300
-/vectornav/IMU | sensor_msgs/Imu | Imu data from VectorNav-VN300
-/vectornav/Mag | sensor_msgs/MagneticField | Raw magnetic field data from VectorNav-VN300
-/vectornav/Odom | nav_msgs/Odometry | Odometry from VectorNav-VN300
-/vectornav/Pres | sensor_msgs/FluidPressure |
-/vectornav/Temp | sensor_msgs/Temperature |
-/velodyne_points | sensor_msgs/PointCloud2 | PointCloud produced by the Velodyne Lidar
-/warthog_velocity_controller/cmd_vel | geometry_msgs/Twist |
-/warthog_velocity_controller/odom | nav_msgs/Odometry |
-### ROS Bag Download
 
+### ROS Bag Download
+<!-->
 The following are the links for the ROS Bag files. 
 * Synced data (60 seconds example [2 GB](https://drive.google.com/file/d/13EHwiJtU0aAWBQn-ZJhTJwC1Yx2zDVUv/view?usp=sharing)): includes  synced */os1_cloud_node/points*, */pylon_camera_node/camera_info* and */pylon_camera_node/image_raw*
 * Full-stack Merged data:(60 seconds example [4.2 GB](https://drive.google.com/file/d/1qSeOoY6xbQGjcrZycgPM8Ty37eKDjpJL/view?usp=sharing)): includes all data in above table and extrinsic calibration info data embedded in the tf tree.
@@ -231,7 +237,7 @@ The following are the links for the ROS Bag files.
 
 
 [![Sequence 00004 Video](https://img.youtube.com/vi/lLLYTI4TCD4/0.jpg)](https://www.youtube.com/watch?v=lLLYTI4TCD4)
-
+-->
 ### ROS Environment Installment
 The ROS workspace includes a plaftform description package which can provide rough tf tree for running the rosbag.
 
