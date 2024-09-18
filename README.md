@@ -32,7 +32,7 @@ Semantic scene understanding is crucial for robust and safe autonomous navigatio
 * 2D mmwave RADAR: [Navtech CTS350-X](https://navtechradar.com/radar-solutions/radar-for-intelligent-transport-solutions/clearway-technical-specification/)
 * RTK GPS: [Saprkfun RTK Facet](https://www.sparkfun.com/products/19984)
 
-<!--![Sensor Setup Illustration](./images/sensor_setup.png)-->
+![Sensor Setup Illustration](./images/3D_arl.png)
 
 
 ## Folder structure
