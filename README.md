@@ -38,7 +38,7 @@ Semantic scene understanding is crucial for robust and safe autonomous navigatio
 ## Folder structure
 
 <pre>
-GOD
+The Great Outdoors Dataset
 ├── pt_test.lst
 ├── pt_val.lst
 ├── pt_train.lst
