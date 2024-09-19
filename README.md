@@ -43,7 +43,8 @@ GOD
 ├── pt_val.lst
 ├── pt_train.lst
 ├── 00000
-      ├── os1_cloud_node_kitti_bin/             -- directory containing ".bin" files with Ouster 64-Channels point clouds.   
+      ├── os1_cloud_node_kitti_bin/             -- directory containing ".bin" files with Ouster 64-Channels point clouds.  
+      ├── nav_radar_node/       -- directory containing radar polar images.
       <!--├── os1_cloud_node_semantickitti_label_id/     -- containing, ".label" files for Ouster Lidar point cloud with  manually labelled semantics label
       -->
       ├── pylon_camera_node/    -- directory containing ".png" files from the color camera.  
