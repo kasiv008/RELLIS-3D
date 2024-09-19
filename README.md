@@ -90,14 +90,10 @@ With the goal of providing multi-modal data to enhance autonomous off-road navig
 **Full Image Annotations ID Format** ([Download](https://drive.google.com/file/d/1u_cRN-SkU2b_M5pWCRU0rL4_RkCTUTsA/view?usp=sharing))
 
 ### LiDAR Data
-<<<<<<< HEAD
 **Synced LiDAR Pointcloud Semantic-KITTI** ([Download]())
 
 ### RADAR Data
 **Synced RADAR Polar Images** ([Download](https://drive.google.com/file/d/1KC56g3GriVsIA5rkKCFA7mqBWeuZL9PQ/view?usp=sharing))
-=======
-**Synced LiDAR DATA** ([Download](https://drive.google.com/file/d/1ysyP7bsihgHoA2q1GgfiuvvXHNqfQkeN/view?usp=sharing))
->>>>>>> 9f3103196ba6a19a52b1d3f689b7cf5ea2b08356
 <!--
 **Image Split File** ([44KB](https://drive.google.com/file/d/1zHmnVaItcYJAWat3Yti1W_5Nfux194WQ/view?usp=sharing))
 -->
