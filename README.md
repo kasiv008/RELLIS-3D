@@ -214,6 +214,7 @@ lester/left_drive/status/battery_voltage | std_msgs/Float64 |
 /tf_static  | tf2_msgs/TFMessage
 
 ### ROS Bag Download
+The following is the link to the rosbag.([Download](https://drive.google.com/file/d/1aze9xgbN1ID-9CW4U3CJtYi6ChBmaKGO/view?usp=sharing))
 <!--
 The following are the links for the ROS Bag files. 
 * Synced data (60 seconds example [2 GB](https://drive.google.com/file/d/13EHwiJtU0aAWBQn-ZJhTJwC1Yx2zDVUv/view?usp=sharing)): includes  synced */os1_cloud_node/points*, */pylon_camera_node/camera_info* and */pylon_camera_node/image_raw*
@@ -242,12 +243,14 @@ The following are the links for the ROS Bag files.
 
 [![Sequence 00004 Video](https://img.youtube.com/vi/lLLYTI4TCD4/0.jpg)](https://www.youtube.com/watch?v=lLLYTI4TCD4)
 -->
+![Warthog in RVIZ](images/platform_ros.png)
+<!--
 ### ROS Environment Installment
 The ROS workspace includes a plaftform description package which can provide rough tf tree for running the rosbag.
 
 To run cartographer on RELLIS-3D please refer to [here](https://github.com/unmannedlab/cartographer)
 
-![Warthog in RVIZ](images/platform_ros.png)
+
 
 
 ## Full Data Download:
@@ -264,13 +267,13 @@ To run cartographer on RELLIS-3D please refer to [here](https://github.com/unman
       primaryClass={cs.CV}
 }
 ```
-
+-->
 ## Collaborator
 <a href="https://www.arl.army.mil/"><img src="images/arl_logo.png" alt="The DEVCOM Army Research Laboratory" height="90px" width="270px"></a>
-
+<!--
 ## License
 All datasets and code on this page are copyright by us and published under the Creative Commons Attribution-NonCommercial-ShareAlike 3.0 License. 
-
+-->
 
 ## Related Work
 
