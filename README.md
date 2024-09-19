@@ -73,23 +73,27 @@ With the goal of providing multi-modal data to enhance autonomous off-road navig
 
 ### RGB Image Download: 
 
-**Image with Annotation Examples** ([Download 3MB](https://drive.google.com/file/d/1oi5KpBYXefvMpiUzrVE1BWcPfmMieTdx/view?usp=sharing))
+**Image with Annotation Examples** ([Download](https://drive.google.com/file/d/1oi5KpBYXefvMpiUzrVE1BWcPfmMieTdx/view?usp=sharing))
 
-**Full Images** ([Download 11GB](https://drive.google.com/file/d/1UPyMB3Q21JGIUHnwLHI5-uaLICWakZ9W/view?usp=sharing))
+**Full Images** ([Download](https://drive.google.com/file/d/1Y_XHZw6BeuqwD280K7xw4eapNRpSKXA5/view?usp=sharing))
 
-**Full Image Annotations Color Format** ([Download 119MB](https://drive.google.com/file/d/1Bqn4opdShBzWf_ltfhK-0CWT77UG_FZx/view?usp=sharing))
+**Full Image Annotations Color Format** ([Download](https://drive.google.com/file/d/1qc4J1DgiWU0MsUhUhyX0p8sQROoVb4uZ/view?usp=sharing))
 
-**Full Image Annotations ID Format** ([Download 94MB](https://drive.google.com/file/d/1HC2xBOF_Z7iZ8mcfKaExQPY0HxWrQTX0/view?usp=sharing))
+**Full Image Annotations ID Format** ([Download](https://drive.google.com/file/d/1VehRXZ_Bw4DolGVvqVk4qr_pmbUXYgQA/view?usp=sharing))
 
 ### Thermal Image Download: 
 
-**Full Images** ([Download 11GB](https://drive.google.com/file/d/1PDcZWtFtDGDpo-_D4ENirTCOg4K_mhTo/view?usp=sharing))
+**Full Images** ([Download](https://drive.google.com/file/d/1kTwL7O_v4Qc8WpzpT7416VXgENYm1ZK-/view?usp=sharing))
 
-**Full Image Annotations Color Format** ([Download 119MB](https://drive.google.com/file/d/1IRCJaLssCYR9le9PFIOlEa5zRQr7UD1B/view?usp=sharing))
+**Full Image Annotations Color Format** ([Download](https://drive.google.com/file/d/1g6Hf7-wg3JqQMDufhpHCyGK-cPrkQ7Ck/view?usp=sharing))
 
-**Full Image Annotations ID Format** ([Download 94MB](https://drive.google.com/file/d/1RADZZH5TJ5PmxkVuA_RCZ_6CbRsKj1C-/view?usp=drive_link))
+**Full Image Annotations ID Format** ([Download](https://drive.google.com/file/d/1u_cRN-SkU2b_M5pWCRU0rL4_RkCTUTsA/view?usp=sharing))
 
 ### LiDAR Data
+**Synced LiDAR Pointcloud Semantic-KITTI** ([Download]())
+
+### RADAR Data
+**Synced RADAR Polar Images** ([Download](https://drive.google.com/file/d/1KC56g3GriVsIA5rkKCFA7mqBWeuZL9PQ/view?usp=sharing))
 <!--
 **Image Split File** ([44KB](https://drive.google.com/file/d/1zHmnVaItcYJAWat3Yti1W_5Nfux194WQ/view?usp=sharing))
 -->
