@@ -4,7 +4,7 @@
 <p align="center">
 <a href="https://www.tamu.edu/"><img src="images/tamu_logo.png" alt="Texas A&M University" height="90px" width="450px"></a>&emsp;&emsp;&emsp;&emsp;<a href="https://www.arl.army.mil/"><img src="images/arl_logo.png" alt="The DEVCOM Army Research Laboratory" height="90px" width="270px"></a></p>
 <p align="center">
-Peng Jiang<sup>1</sup>, Philip Osteen<sup>2</sup>, Maggie Wigness<sup>2</sup> and Srikanth Saripalli<sup>1</sup><br>
+Kasi Viswanath<sup>1</sup>, Peng Jiang<sup>1</sup>, Philip Osteen<sup>2</sup>, Maggie Wigness<sup>2</sup> and Srikanth Saripalli<sup>1</sup><br>
 1. <a href="https://www.tamu.edu/">Texas A&M University; </a>&emsp;2. <a href="https://www.arl.army.mil/">CCDC Army Research Laboratory</a><br>
 <!--a href="https://unmannedlab.github.io/research/RELLIS-3D">[Website]</a> <a href="https://arxiv.org/abs/2011.12954">[Paper]</a> <a href="https://github.com/unmannedlab/RELLIS-3D">[Github]</a--> 
 </p>
@@ -17,8 +17,7 @@ Peng Jiang<sup>1</sup>, Philip Osteen<sup>2</sup>, Maggie Wigness<sup>2</sup> an
 * 01/24/2022 add Velodyne point clouds in kitti format and labels transfered from Ouster
 -->
 ## Overview
-Semantic scene understanding is crucial for robust and safe autonomous navigation, particularly so in off-road environments. Recent deep learning advances for 3D semantic segmentation rely heavily on large sets of training data; however, existing autonomy datasets represent urban environments or lack multimodal off-road data. 
-With the advent of new robust sensors such as mmWave Radar, an updated dataset is in need. We present The Great Outdoors Dataset, a successor of RELLIS-3D.
+The Great Outdoors Dataset: Off-Road Multi-Modal Dataset is a comprehensive resource aimed at advancing autonomous navigation research in challenging off-road environments. Collected using an unmanned ground vehicle (UGV) designed for unstructured terrain, this dataset offers a rich combination of sensor data to support robust and safe navigation. The sensor setup includes a 64-channel LiDAR for detailed 3D point cloud generation, multiple RGB cameras for high-resolution visual capture, and a thermal camera for infrared imaging in low-visibility or night-time conditions. In addition, the dataset features data from an inertial navigation system (INS) that provides accurate motion and orientation measurements, a 2D mmWave radar for enhanced perception in adverse weather conditions, and an RTK GPS system for precise geolocation. The Great Outdoors Dataset places a strong emphasis on semantic scene understanding, addressing the gap in off-road autonomy research by offering multimodal data with annotated labels for 3D semantic segmentation. Unlike many existing datasets that focus on urban environments, this dataset is specifically tailored for off-road applications, providing a crucial resource for the development of advanced machine learning models and sensor fusion techniques. By building on the foundation of [RELLIS-3D](https://github.com/unmannedlab/RELLIS-3D), it is designed to push the boundaries of autonomous navigation in unstructured environments, enabling the development of algorithms that can effectively navigate and perceive the complex dynamics of off-road settings.
 
 
 ![LiDAR Scans Statics](./images/GOD_image.png)
@@ -62,7 +61,7 @@ The Great Outdoors Dataset
 -->
 ## Annotated Data:
 ### Ontology:
-With the goal of providing multi-modal data to enhance autonomous off-road navigation, we defined an ontology of object and terrain classes, which largely derives from [the RELLIS-3D dataset](https://github.com/unmannedlab/RELLIS-3D) but also includes unique terrain and object classes not present in RELLIS-3D. Specifically, sequences from this dataset includes classes gravel and mulch. Overall, 22 classes (including void class) are present in the data.
+To provide multi-modal data for enhancing autonomous off-road navigation, we developed an ontology of object and terrain classes that extends the foundation of the [RELLIS-3D dataset](https://github.com/unmannedlab/RELLIS-3D), while incorporating additional terrain and object categories specific to our dataset. Notably, our sequences introduce new classes such as gravel and mulch, which were absent in RELLIS-3D. Overall, the dataset encompasses 22 distinct classes, including trees, grass, dirt, sky, gravel, bush, mulch, water, poles, fences, persons, buildings, objects, vehicles, barriers, mud, concrete, puddles, rubble, asphalt, and a void class. This expanded ontology provides a more comprehensive understanding of off-road environments, offering enriched data for advanced semantic segmentation and improved performance in challenging, unstructured terrains.
 
 **Ontology Definition** ([Ontology](./images/GOD_Ontology.png))
 
@@ -279,8 +278,7 @@ All datasets and code on this page are copyright by us and published under the C
 
 ## Related Work
 
-[SemanticUSL: A Dataset for Semantic Segmentation Domain Adatpation](https://unmannedlab.github.io/research/SemanticUSL)
-
-[LiDARNet: A Boundary-Aware Domain Adaptation Model for Lidar Point Cloud Semantic Segmentation](https://unmannedlab.github.io/research/LiDARNet)
 
 [A RUGD Dataset for Autonomous Navigation and Visual Perception inUnstructured Outdoor Environments](http://rugd.vision/)
+
+[RELLIS-3D Dataset](https://github.com/unmannedlab/RELLIS-3D)
